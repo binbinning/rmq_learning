@@ -4,8 +4,9 @@ import pika
 connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
 channel = connection.channel()
 
+# update method parameter for pika 0.11.2
 channel.exchange_declare(exchange='logs',
-                         type='fanout')
+                         exchange_type='fanout')
 
 result = channel.queue_declare(exclusive=True)
 queue_name = result.method.queue
