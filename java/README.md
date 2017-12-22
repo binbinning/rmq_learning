@@ -18,9 +18,13 @@ Copy those files in your working directory, along the tutorials Java files.
 
 To compile you only need the Rabbitmq Java Client jar on the classpath.
 
+> $ javac -cp .:lib/* -sourcepath src/*.java -d target/
+
 To run them you'll need all the dependencies, see examples below.
 
-Note: If you're on Windows,
+> $ java -cp target:lib/* Send 
+
+Note: *If you're on Windows,
 use a semicolon instead of a colon to separate items in the classpath.
 
 > You can set an environment variable for the jar files on the classpath e.g.
